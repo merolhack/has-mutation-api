@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-require('dotenv').config()
+const NODE_ENV = require('../config');
 
 const hasMutation = require('./functions/has-mutation');
 const getWholePercent = require('./functions/ratio');
