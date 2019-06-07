@@ -1,0 +1,38 @@
+{
+  "name": "has-mutation-api",
+  "version": "1.0.0",
+  "description": "REST API that analyse if a person has genetic differences based on their DNA sequence",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha --timeout 10000 --exit",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merolhack/has-mutation-api.git"
+  },
+  "keywords": [
+    "mutant",
+    "human",
+    "nodejs"
+  ],
+  "author": "Lenin Meza <merolhack@gmail.com> (http://www.linkedin.com/in/leninmezazarco)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/merolhack/has-mutation-api/issues"
+  },
+  "homepage": "https://github.com/merolhack/has-mutation-api#readme",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.13"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
+  }
+}
