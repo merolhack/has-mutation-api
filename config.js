@@ -9,7 +9,7 @@ if (!('error' in result)) {
   envs = {};
   console.log(process.env);
   for (var property in process.env) {
-    if (object.hasOwnProperty(property)) {
+    if (process.env.hasOwnProperty(property)) {
         envs[property] = process.env[property];
     }
   }
