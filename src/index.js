@@ -9,15 +9,15 @@ const getWholePercent = require('./functions/ratio');
 const Validation = require('./models/validation');
 
 const app = express();
-const port = 80;
+const port = NODE_ENV.PORT || 8080;
 // parse application/json
 app.use(bodyParser.json());
 
 // Set up mongoose connection
-const USER = process.env.MDB_USER;
-const PASS = process.env.MDB_PASS;
-const HOST = process.env.MDB_HOST;
-const NAME = process.env.MDB_NAME;
+const USER = NODE_ENV.MDB_USER;
+const PASS = NODE_ENV.MDB_PASS;
+const HOST = NODE_ENV.MDB_HOST;
+const NAME = NODE_ENV.MDB_NAME;
 const DB_URI = `mongodb+srv://${USER}:${PASS}@${HOST}/${NAME}?retryWrites=true&w=majority`;
 mongoose.connect(DB_URI, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
